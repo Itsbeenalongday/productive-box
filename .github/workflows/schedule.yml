@@ -16,3 +16,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
           TIMEZONE: Asia/Seoul
+      # Commits all changed files to the repository
+      - name: Commit to the repo
+        run: |
+          git config --global user.name "Itsbeenalongday/github-stats"
+          git config --global user.email "dbtjdals1771@ajou.ac.kr"
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m '프로필을 성공적으로 변경했습니다!' || echo
+          git push
+
