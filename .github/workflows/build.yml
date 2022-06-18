@@ -23,7 +23,7 @@ jobs:
           yarn build
       - name: commit change & push
         run: |
-          git config user.name 'Itsbeenalongday'
+          git config user.name 'ZeroOnePro'
           git config user.email 'dbtjdals1771@ajou.ac.kr'
           git add .
           git commit --allow-empty -m "build automatically"
